@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import History from "./pages/History";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Layout from "./components/Layout";
+import Verify from "./pages/Verify"; // Import the Verify component
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/verify" element={<Verify />} /> {/* Add the Verify route */}
 
         <Route
           path="/dashboard"
