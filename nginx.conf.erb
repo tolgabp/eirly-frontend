@@ -12,6 +12,8 @@ http {
     root <%= ENV["NGINX_ROOT"] || "dist" %>;
     index index.html;
 
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:";
+
     location / {
       try_files $uri $uri/ /index.html;
     }
