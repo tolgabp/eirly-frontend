@@ -1,17 +1,30 @@
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthProvider";
-import AuthForm from "../components/AuthForm";
-import api from "../api/axiosInstance";
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import api from '../api/axiosInstance'; 
 
-export default function Login() {
-  const navigate = useNavigate();
-  const { login } = useAuth();
+const Verify = () => {
+  const location = useLocation();
 
-  const handleLogin = async (form) => {
-    const res = await api.post("/auth/login", form);
-    login(res.data.token);
-    navigate("/dashboard");
-  };
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const token = queryParams.get('token');
 
-  return <AuthForm title="Login" variant="login" onSubmit={handleLogin} />;
-}
+    if (token) {
+      api.get(`/auth/confirm?token=${token}`) 
+        .then(response => {
+          alert('Email verified successfully!');
+        })
+        .catch(error => {
+          alert('Verification failed. Please try again.');
+        });
+    }
+  }, [location]);
+
+  return (
+    <div>
+      <h2>Verifying your email...</h2>
+    </div>
+  );
+};
+
+export default Verify;

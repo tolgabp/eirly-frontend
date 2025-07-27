@@ -7,7 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import History from "./pages/History";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Layout from "./components/Layout";
-import Verify from "./pages/Verify"; // Import the Verify component
+import Verify from "./pages/Verify"; 
 
 export default function App() {
   return (
