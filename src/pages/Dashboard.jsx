@@ -49,7 +49,7 @@ export default function Dashboard() {
   };
 
   return (
-      <div className="min-h-screen bg-white p-6 max-w-3xl mx-auto">
+      <div className="min-h-screen bg-[#F8FAFC] p-6 max-w-3xl mx-auto">
         <QuotaBar used={quota.used} limit={quota.limit} />
         <SummaryForm onSubmit={handleSummarize} loading={loading} />
         {error && (

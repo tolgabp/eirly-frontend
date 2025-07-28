@@ -22,8 +22,8 @@ const Verify = () => {
   }, [location]);
 
   return (
-    <div>
-      <h2>{message}</h2>
+    <div className="min-h-screen flex items-center justify-center bg-[#F8FAFC]">
+      <h2 className="text-2xl font-semibold text-[#1E293B]">{message}</h2>
     </div>
   );
 };

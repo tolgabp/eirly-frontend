@@ -21,18 +21,18 @@ export default function AuthForm({ title, onSubmit, variant }) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#F8FAFC] px-4">
       <div className="w-full max-w-md bg-white p-6 rounded-xl shadow-md transition-all">
         <div className="flex justify-end mb-4">
           <Link
             to="/"
-            className="text-sm px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition"
+            className="text-sm px-4 py-2 bg-[#F8FAFC] text-[#1E293B] rounded-md hover:bg-gray-200 transition"
           >
             Home
           </Link>
         </div>
 
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+        <h2 className="text-3xl font-semibold text-[#1E293B] mb-6 text-center">
           {title}
         </h2>
 
@@ -43,7 +43,7 @@ export default function AuthForm({ title, onSubmit, variant }) {
             placeholder="Email"
             value={form.email}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
             required
           />
           <input
@@ -52,12 +52,12 @@ export default function AuthForm({ title, onSubmit, variant }) {
             placeholder="Password"
             value={form.password}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
             required
           />
           <button
             type="submit"
-            className="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition font-medium"
+            className="w-full py-2 bg-[#4F46E5] text-white rounded-xl shadow-md hover:bg-indigo-700 transition font-medium"
           >
             {title}
           </button>
@@ -67,13 +67,13 @@ export default function AuthForm({ title, onSubmit, variant }) {
           <p className="mt-4 text-center text-sm text-red-600">{message}</p>
         )}
 
-        <p className="mt-6 text-center text-sm text-gray-600">
+        <p className="mt-6 text-center text-sm text-[#64748B]">
           {variant === "login" ? (
             <>
               Don’t have an account?{" "}
               <Link
                 to="/signup"
-                className="text-blue-600 hover:underline font-medium"
+                className="text-[#4F46E5] hover:underline font-medium"
               >
                 Sign up
               </Link>
@@ -83,7 +83,7 @@ export default function AuthForm({ title, onSubmit, variant }) {
               Already have an account?{" "}
               <Link
                 to="/login"
-                className="text-blue-600 hover:underline font-medium"
+                className="text-[#4F46E5] hover:underline font-medium"
               >
                 Log in
               </Link>
