@@ -25,7 +25,7 @@ export default function SummaryForm({ onSubmit, loading }) {
       <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
         <input
           type="text"
-          placeholder="Tone (optional)"
+          placeholder="e.g., Informative, Storyteller, Friendly"
           value={tone}
           onChange={(e) => setTone(e.target.value)}
           className="flex-1 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
